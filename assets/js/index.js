@@ -14,7 +14,7 @@ function limpiar() {
 }
 
 function calcular() {
-    let b = document.getElementById("inputBase").value;
-    let a = document.getElementById("inputBase").value;
-    document.getElementById("area").value = b * a;
+    let b = parseInt(document.getElementById("inputBase").value);
+    let a = parseInt(document.getElementById("inputAltura").value);
+    document.getElementById("inputArea").value = b * a;
 }
