@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/index.css">
+  <link rel="icon" href="assets/img/favicon.ico" />
+  <title>T1201 PROGRAMACIÓN WEB I</title>
+</head>
+
+<body>
+  <section class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand">T1201 PROGRAMACIÓN WEB I 2024Q3</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <section class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        Ejercicio #1
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Calculo área de un reactángulo</h5>
+        <div class="row g-3 align-items-center row">
+          <div class="col-auto">
+            <label class="col-form-label">Base</label>
+          </div>
+          <div class="col-auto">
+            <input type="number" id="inputBase" class="form-control text-end" aria-describedby="inputBaseHelpInline">
+          </div>
+          <div class="col-auto">
+            <label class="col-form-label">Altura</label>
+          </div>
+          <div class="col-auto">
+            <input type="number" id="inputAltura" class="form-control text-end" aria-describedby="inputAlturaHelpInline">
+          </div>
+          <div class="col-auto">
+            <label class="col-form-label">Área</label>
+          </div>
+          <div class="col-auto">
+            <input disabled type="text" id="inputArea" class="form-control text-end" aria-describedby="inputAreaHelpInline">
+          </div>
+        </div>
+        <p class="card-text"></p>
+        <a class="btn btn-secondary btn-sm" id="btonLimpiar">Limpiar</a>
+        <a class="btn btn-primary btn-sm" id="btonCalcular">Calcular</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="/assets/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/index.js"></script>
+</body>
+
+</html>
