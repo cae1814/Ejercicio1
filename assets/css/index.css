@@ -1,9 +1,5 @@
-.card-img-top{
-    width: 300px;
-    height: 300px;
-    margin: auto;
-}
-
-.img-tabla{
-    width: 50%;
+.error{
+   color: red;
+   font-size: 11px;
+   font-style: oblique;
 }
