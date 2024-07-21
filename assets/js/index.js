@@ -11,6 +11,7 @@ function main() {
 function eje1_limpiar() {
     document.getElementById("eje1InputBase").value = 0;
     document.getElementById("eje1InputAltura").value = 0;
+    document.getElementById("eje1InputArea").value = "";
 }
 
 function eje1_calcular() {
