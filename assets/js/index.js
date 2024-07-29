@@ -149,7 +149,7 @@ function showAlert(msg){
 function loadTableFetch1(){
     let i = 0; 
     fetch("https://api.escuelajs.co/api/v1/users").then(response => response.json()).then(data => {
-        let tabla = '<tr><th>Id</th><th></th><th>Name</th><th>Email</th><th>Rol</th><th>CreationDate</th><th>Updated</th></tr>';
+        let tabla = '<tr><th>Id</th><th></th><th>Name</th><th>Email</th><th>Rol</th><th>Password</th><th>CreationDate</th></tr>';
          
         for (let user of data) {
             i++;
@@ -158,9 +158,9 @@ function loadTableFetch1(){
                           <td><div class="text-center"><img src="${user.avatar}" width="40px" class="rounded" alt="..." onclick="loadTableFetch1Verimage(this.src, '${user.name}', '${user.updatedAt}')" style="cursor:pointer;"></div></td>
                           <td>${user.name}</td>
                           <td>${user.email}</td>
-                          <td>${user.role}</td>
+                          <td>${user.role}</td>                          
+                          <td>${user.password}</td> 
                           <td>${user.creationAt}</td>
-                          <td>${user.updatedAt}</td> 
                      </tr>`
         }
 
