@@ -11,7 +11,7 @@ function main() {
      // Agregando evento para carga de tabla usuarios
      ejeFetch1_btonCargar.addEventListener("click",loadTableFetch1);
 }
-
+ 
 function eje1_limpiar() {
     document.getElementById("eje1InputBase").value = 0;
     document.getElementById("eje1InputAltura").value = 0;
