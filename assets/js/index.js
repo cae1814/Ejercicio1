@@ -10,6 +10,13 @@ function main() {
 
      // Agregando evento para carga de tabla usuarios
      ejeFetch1_btonCargar.addEventListener("click",loadTableFetch1);
+
+     // Ejercicio 2, calculo de notas //
+     // Agregando evento al boton Limpiar 
+     eje3_btonLimpiar.addEventListener("click", eje3_limpiar);
+
+     // Agregando evento al boton Calcular 
+     eje3_btonCalcular.addEventListener("click", eje3_calcular);
 }
  
 function eje1_limpiar() {
@@ -63,6 +70,63 @@ function isNumber(pnum) {
     } else {
         return true;
     }
+}
+
+function eje3_limpiar() {
+    document.getElementById("eje3Nota1").value = 0;
+    document.getElementById("eje3Nota2").value = 0;
+    document.getElementById("eje3Nota3").value = 0;
+    document.getElementById("eje3NotaFinal").value = 0;
+}
+
+function eje3_calcular() {
+    document.getElementById("eje3NotaFinal").value = "";
+    let nota1 = document.getElementById("eje3Nota1");
+    let nota2 = document.getElementById("eje3Nota2");
+    let nota3 = document.getElementById("eje3Nota3");
+
+    if (eje3_validaciones(nota1, nota2, nota3)){
+        let notaf = (parseInt(nota1.value)+parseInt(nota2.value)+parseInt(nota3.value));
+        let cat = "";
+
+        if (notaf >= 0 && notaf <= 59){
+            cat = "Reprobado";
+        } else if (notaf >= 60 && notaf <= 79){
+            cat = "Bueno";
+        } else if (notaf >= 80 && notaf <= 89){
+            cat = "Muy Bueno";
+        } else if (notaf >= 90 && notaf <= 100){
+            cat = "Sobresaliente";
+        }
+
+        document.getElementById("eje3NotaFinal").value = cat+" ("+notaf+"%)";
+    }
+}
+
+function eje3_validaciones(nota1, nota2, nota3){
+    
+    if (parseInt(nota1.value) > parseInt(nota1.max)){
+        document.getElementById("error-eje3Nota1HelpMsg").removeAttribute('hidden');
+        return false;
+    } else {
+        document.getElementById("error-eje3Nota1HelpMsg").setAttribute('hidden', '');
+    } 
+
+    if (parseInt(nota2.value) > parseInt(nota2.max)){
+        document.getElementById("error-eje3Nota2HelpMsg").removeAttribute('hidden');
+        return false;
+    } else {
+        document.getElementById("error-eje3Nota2HelpMsg").setAttribute('hidden', '');
+    } 
+
+    if (parseInt(nota3.value) > parseInt(nota3.max)){
+        document.getElementById("error-eje3Nota3HelpMsg").removeAttribute('hidden');
+        return false;
+    } else {
+        document.getElementById("error-eje3Nota3HelpMsg").setAttribute('hidden', '');
+    } 
+
+    return true;
 }
 
 function showAlert(msg){

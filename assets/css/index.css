@@ -8,3 +8,15 @@
    font-family: "Gill Sans", sans-serif;
    font-size: 12px;
 }
+
+.text-align {
+   text-align: left;
+}
+
+.text-right {
+   text-align: right;
+}
+
+.text-center {
+   text-align: center;
+}
